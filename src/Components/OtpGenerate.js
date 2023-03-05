@@ -41,21 +41,18 @@ const OtpGenerate = (props) => {
     console.log(user.email);
     LoginApi.generateotp(email)
       .then((response) => {
-        console.log(response.data.role);
+        console.log(response.data.email);
         console.log(response.data);
         setMessage("Login successful.");
         console.log(message);
-        navigate("/otpverify");
-        // if (response.data.role === "admin") {
-        //   localStorage.setItem("admin", JSON.stringify(response.data));
-        //   console.log(response.data);        
-        //   navigate("/admindashboard");
-        // } else if (response.data.role === "hospital") {
-        //   localStorage.setItem("hospital", JSON.stringify(response.data));
-        //   console.log(response.data);      
-        //   navigate("/hospitaldashboard");
-        // } else {
-        //   localStorage.setItem("user", JSON.stringify(response.data));
+        
+        if (response.data.email === "email") {
+          localStorage.setItem("email", JSON.stringify(response.data.email));
+          console.log(response.data);        
+          navigate("/otpverify");
+        } else{
+          navigate("/otpverify");
+        }
           
         //   navigate("/userdashboard");
         // }

@@ -13,6 +13,17 @@ class LoginApi {
     return axios.post(USER_LOGIN_BASE_URL + "/generateotp/" + email);
   }
 
+  verifyotp(uotp){
+    console.log(uotp);
+    return axios.post(USER_LOGIN_BASE_URL + "/verifyotp/" + uotp);
+  }
+
+  changepassword(user){
+    console.log(user);
+    return axios.post(USER_LOGIN_BASE_URL + "/changepassword/" + user);
+  }
+
+
 }
 
 

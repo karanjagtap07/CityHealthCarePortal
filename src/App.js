@@ -35,6 +35,7 @@ import { Navigate } from "react-router-dom";
 import ErrorPageComponent from "./Components/ErrorPageComponent";
 import OtpGenerate from "./Components/OtpGenerate";
 import OtpVerify from "./Components/OtpVerify";
+import ChangePassword from "./Components/ChangePassword";
 
 function App() {
   return (
@@ -313,6 +314,15 @@ function App() {
                 element={
                   <>
                     <HeaderComponents /> <OtpVerify /> <FooterComponents />
+                  </>
+                }
+              ></Route>
+              <Route
+                exact
+                path="/changepassword"
+                element={
+                  <>
+                    <HeaderComponents /> <ChangePassword /> <FooterComponents />
                   </>
                 }
               ></Route>

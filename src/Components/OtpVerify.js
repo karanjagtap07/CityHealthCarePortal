@@ -5,14 +5,14 @@ import LoginApi from "../Services/LoginApi.js";
 
 const OtpVerify = (props) => {
   const navigate = useNavigate();
-  const [otp, setOtp] = useState("");
+  const [uotp, setOtp] = useState("");
   const [message, setMessage] = useState("Invalid OTP");
 
   const otpVr = useRef();
   const otpVr2 = useRef();
 
   const validateOtp = () => {
-    const otpId = otp;
+    const otpId = uotp;
     const otpRegex = /^\d{6}$/;
     if (otpRegex.test(otpId)) {
         otpVr2.current.innerHTML = "";
@@ -25,10 +25,10 @@ const OtpVerify = (props) => {
   const removeAlert = () => {
     otpVr2.current.innerHTML = "";
   };
-  console.log(otp);
+  console.log(uotp);
   /////////////////////////////////////////////////////////////////////////////
   const OtpVerify = (e) => {
-    if (otp === "") {
+    if (uotp === "") {
       Swal.fire({
         title: "Please fill the Credentials",
         icon: "warning",
@@ -38,15 +38,16 @@ const OtpVerify = (props) => {
     }
     e.preventDefault();
     const user = {
-      otp,
+      uotp,
     };
-    console.log(user.otp);
-    LoginApi.otpVerify(user)
+    console.log(user.uotp);
+    LoginApi.verifyotp(uotp)
       .then((response) => {
         console.log(response.data.role);
         console.log(response.data);
         setMessage("Login successful.");
         console.log(message);
+        console.log(uotp);
         navigate("/changepassword");
         // if (response.data.role === "admin") {
         //   localStorage.setItem("admin", JSON.stringify(response.data));
@@ -88,11 +89,11 @@ const OtpVerify = (props) => {
             <h2 className="text-muted text-center mb-4">Verify OTP</h2>
             <div className="form-group">
               <input
-                id="otp"
+                id="uotp"
                 type="text"
                 className="form-control text-center mt-3"
                 placeholder="OTP"
-                value={otp}
+                value={uotp}
                 onChange={(e)=>setOtp(e.target.value)}
                 onBlur={validateOtp}
                 onFocus={removeAlert}
