@@ -41,14 +41,14 @@ const OtpGenerate = (props) => {
     console.log(user.email);
     LoginApi.generateotp(email)
       .then((response) => {
-        console.log(response.data.email);
+        console.log(response.data.email+"Getting value");
         console.log(response.data);
         setMessage("Login successful.");
         console.log(message);
         
-        if (response.data.email === "email") {
+        if (response.data.email === email) {
           localStorage.setItem("email", JSON.stringify(response.data.email));
-          console.log(response.data);        
+          console.log(response.data.email+"after cokkies");        
           navigate("/otpverify");
         } else{
           navigate("/otpverify");

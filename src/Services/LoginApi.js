@@ -18,9 +18,9 @@ class LoginApi {
     return axios.post(USER_LOGIN_BASE_URL + "/verifyotp/" + uotp);
   }
 
-  changepassword(user){
-    console.log(user);
-    return axios.post(USER_LOGIN_BASE_URL + "/changepassword/" + user);
+  changepassword(password,e){
+    console.log(password);
+    return axios.put(USER_LOGIN_BASE_URL + "/changepassword/" + password +"/"+ e);
   }
 
 

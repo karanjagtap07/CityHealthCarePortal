@@ -1,4 +1,4 @@
-import { React, useRef, useState } from "react";
+import { React, useRef, useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import LoginApi from "../Services/LoginApi.js";
@@ -8,11 +8,18 @@ const ChangePassword = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("Invalid user Id or password");
   const navigate = useNavigate();
+  const [e, setE] = useState(null);
 
   const passwordVr=useRef();
   const passwordVr2=useRef();
   const confirmPasswordVr=useRef();
   const confirmPasswordVr2=useRef();
+
+  useEffect(() => {
+    const email = JSON.parse(localStorage.getItem("email"));
+    console.log(email);
+    setE(email);
+  });
 
   const  validatePassword=()=> {
     const password = passwordVr.current.value;
@@ -84,7 +91,7 @@ const ChangePassword = () => {
           confirmPassword,
         };
         
-        LoginApi.changepassword(user)
+        LoginApi.changepassword(password,e)
         .then((res) => {
           console.log(res.data);
           setMessage("Password changed successfully.");
@@ -165,4 +172,4 @@ const ChangePassword = () => {
 }
 
 
-export default ChangePassword;
+export default ChangePassword

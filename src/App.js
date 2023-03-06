@@ -317,6 +317,7 @@ function App() {
                   </>
                 }
               ></Route>
+              <Route exact path="*" element={<ErrorPageComponent />}></Route>
               <Route
                 exact
                 path="/changepassword"
