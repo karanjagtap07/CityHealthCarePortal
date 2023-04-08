@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/CityHealthCarePortal/static/css/main.06e501ab.css",
+    "main.js": "/CityHealthCarePortal/static/js/main.c6870e23.js",
+    "static/js/787.64f79147.chunk.js": "/CityHealthCarePortal/static/js/787.64f79147.chunk.js",
+    "static/media/Sumeet.jpg": "/CityHealthCarePortal/static/media/Sumeet.3b9b5958e937143da5e5.jpg",
+    "static/media/Neha.jpg": "/CityHealthCarePortal/static/media/Neha.fc9711484cc5a0a1e0c8.jpg",
+    "static/media/Aboli.jpeg": "/CityHealthCarePortal/static/media/Aboli.237af4fc25e0371d3a4c.jpeg",
+    "static/media/Swaraj.jpeg": "/CityHealthCarePortal/static/media/Swaraj.c6080b0db5a74df5dfc0.jpeg",
+    "static/media/hospital2.jpg": "/CityHealthCarePortal/static/media/hospital2.f4c7f65c8bb06aa6c65a.jpg",
+    "static/media/Sanket.jpg": "/CityHealthCarePortal/static/media/Sanket.fd58b70402c007c5fbfa.jpg",
+    "static/media/Amol.jpeg": "/CityHealthCarePortal/static/media/Amol.456083d4385e7e773db2.jpeg",
+    "static/media/Omkar.jpeg": "/CityHealthCarePortal/static/media/Omkar.2b9fce887a96495f107a.jpeg",
+    "static/media/Tushar.jpg": "/CityHealthCarePortal/static/media/Tushar.41ef2217d8e41df2d37f.jpg",
+    "static/media/hospital1.webp": "/CityHealthCarePortal/static/media/hospital1.490f090d9cbeee14a0be.webp",
+    "static/media/hospital1.png": "/CityHealthCarePortal/static/media/hospital1.ba346cf947441090b7a0.png",
+    "static/media/hospital3.jpg": "/CityHealthCarePortal/static/media/hospital3.50e495ca5cf918fe9528.jpg",
+    "static/media/Khushboo.jpeg": "/CityHealthCarePortal/static/media/Khushboo.d613f49c0336590b1954.jpeg",
+    "static/media/Karan.jpeg": "/CityHealthCarePortal/static/media/Karan.65840e9aefe4ebe2735d.jpeg",
+    "index.html": "/CityHealthCarePortal/index.html",
+    "main.06e501ab.css.map": "/CityHealthCarePortal/static/css/main.06e501ab.css.map",
+    "main.c6870e23.js.map": "/CityHealthCarePortal/static/js/main.c6870e23.js.map",
+    "787.64f79147.chunk.js.map": "/CityHealthCarePortal/static/js/787.64f79147.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06e501ab.css",
+    "static/js/main.c6870e23.js"
+  ]
+}
